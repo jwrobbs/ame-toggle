@@ -1,10 +1,10 @@
-[class$="-ame-styler-header"] {
+#adminmenu li[class*="-menu-section-header"] {
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
     color: var(--ame-styler-text, #FFF);
     background: var(--ame-styler-bg, #002244);
 }
-[class$="-ame-styler-header"]:hover {
+#adminmenu li[class*="-menu-section-header"]:hover {
     color: var(--ame-styler-text-hover, #002244);
     background: var(--ame-styler-bg-hover, #FFF);
 }
