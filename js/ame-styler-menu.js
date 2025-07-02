@@ -7,11 +7,8 @@ jQuery(function($) {
 
     headers.on('click', function() {
         var $header = $(this);
-        var headerClass = $header.attr('class').split(' ').find(function(c) {
-            return c.endsWith('-ame-styler-header');
-        });
-        var contentClass = headerClass.replace('-header', '-content');
-        var $content = $('.' + contentClass);
+        // Find the next sibling that is a content section
+        var $content = $header.nextAll('[class$="-ame-styler-content"]').first();
 
         // Accordion: close all others
         contents.not($content).slideUp(200);

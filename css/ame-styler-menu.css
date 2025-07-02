@@ -1,6 +1,12 @@
-.ame-styler-header {
+[class$="-ame-styler-header"] {
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
+    color: var(--ame-styler-text, #FFF);
+    background: var(--ame-styler-bg, #002244);
+}
+[class$="-ame-styler-header"]:hover {
+    color: var(--ame-styler-text-hover, #002244);
+    background: var(--ame-styler-bg-hover, #FFF);
 }
 .ame-styler-content {
     display: none;
