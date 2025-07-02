@@ -39,7 +39,7 @@ class Plugin {
         );
         wp_enqueue_style(
             'ame-styler-menu',
-            plugins_url('../css/ame-styler-menu.css', __FILE__),
+            plugins_url('css/ame-styler-menu.css', dirname(__DIR__, 2) . '/ame-styler.php'),
             [],
             '1.0.0'
         );
