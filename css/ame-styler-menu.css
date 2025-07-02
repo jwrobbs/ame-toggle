@@ -1,0 +1,8 @@
+.ame-styler-header {
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.ame-styler-content {
+    display: none;
+    padding-left: 16px;
+}

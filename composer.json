@@ -1,0 +1,12 @@
+{
+    "name": "yourname/ame-styler",
+    "description": "Extends Admin Menu Editor with collapsible menu sections and customizable styling.",
+    "type": "wordpress-plugin",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "AmeStyler\\": "src/"
+        }
+    },
+    "license": "GPL-2.0-or-later"
+}
