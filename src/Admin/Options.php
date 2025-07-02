@@ -74,13 +74,11 @@ class Options {
         $options = get_option(self::OPTION_NAME, self::DEFAULTS);
         ?>
         <style id="ame-styler-custom-css">
-        .ame-styler-header {
-            color: <?php echo esc_html($options['text_color']); ?>;
-            background: <?php echo esc_html($options['background_color']); ?>;
-        }
-        .ame-styler-header:hover {
-            color: <?php echo esc_html($options['hover_text_color']); ?>;
-            background: <?php echo esc_html($options['hover_background_color']); ?>;
+        #adminmenu {
+            --ame-styler-text: <?php echo esc_html($options['text_color']); ?>;
+            --ame-styler-bg: <?php echo esc_html($options['background_color']); ?>;
+            --ame-styler-text-hover: <?php echo esc_html($options['hover_text_color']); ?>;
+            --ame-styler-bg-hover: <?php echo esc_html($options['hover_background_color']); ?>;
         }
         </style>
         <?php

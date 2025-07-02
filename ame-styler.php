@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AME Styler
  * Description: Extends Admin Menu Editor with collapsible menu sections, accordion behavior, and customizable menu styling.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: Josh Robbs
  * Author URI: https://joshrobbs.com
  * Text Domain: ame-styler

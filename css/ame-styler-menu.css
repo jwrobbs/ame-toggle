@@ -5,8 +5,8 @@
     background: var(--ame-styler-bg, #002244);
 }
 #adminmenu li[class*="-ame-styler-header"]:hover {
-    color: var(--ame-styler-text-hover, #002244);
-    background: var(--ame-styler-bg-hover, #FFF);
+    color: var(--ame-styler-text-hover, #FFF);
+    background: var(--ame-styler-bg-hover, #002244);
 }
 .ame-styler-content {
     display: none;
