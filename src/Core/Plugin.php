@@ -32,7 +32,7 @@ class Plugin {
         // Only enqueue on admin pages
         wp_enqueue_script(
             'ame-styler-menu',
-            plugins_url('../js/ame-styler-menu.js', __FILE__),
+            plugins_url('js/ame-styler-menu.js', dirname(__DIR__, 2) . '/ame-styler.php'),
             ['jquery'],
             '1.0.0',
             true

@@ -1,16 +1,32 @@
-jQuery(function($) {
-    var headers = $('#adminmenu li[class*="-ame-styler-header"]');
-    var contents = $('#adminmenu li[class*="-ame-styler-content"]');
+(function ($) {
+	console.log("Admin menu script loaded");
+	// Toggle function.
+	$('[class*="-ame-styler-header"]').on("click", function () {
+		let text = this.className;
+		let stem = /\s([^\s]+)-ame-styler-header/.exec(text);
 
-    // Collapse all on load
-    contents.hide();
+		if (stem && stem[1]) {
+			let selector = "li." + stem[1] + "-ame-styler-content";
+			console.log("Header clicked:", stem[1], "-> toggling", selector);
+			let target = $(selector);
+			$(target).toggle();
+		}
+	});
 
-    headers.on('click', function() {
-        var $header = $(this);
-        var $content = $header.nextAll('li[class*="-ame-styler-content"]').first();
+	// "Open" section if item is active.
+	let classes1 = $("li.wp-menu-open").attr("class") || "";
+	let classes2 = $("li.current").attr("class") || "";
 
-        // Accordion: close all others
-        contents.not($content).slideUp(200);
-        $content.slideToggle(200);
-    });
-});
+	let classes = classes1 + " " + classes2;
+
+	let classList = classes.split(" ");
+	classList = [...new Set(classList)]; // Remove duplicates.
+
+	let len = classList.length;
+	for (let i = 0; i < len; i++) {
+		if (classList[i].includes("-menu-section-item")) {
+			target = $("li." + classList[i]);
+			$(target).toggle();
+		}
+	}
+})(jQuery);
