@@ -1,5 +1,16 @@
 (function ($) {
 	console.log("Admin menu script loaded");
+	// Collapse all content toggles on load, except those containing active/current menu items
+	// On load, open all content sections in the active group
+let activeLi = $("li.wp-menu-open, li.current");
+if (activeLi.length) {
+	let classList = activeLi.attr("class") || "";
+	let match = /([^-\s]+)-ame-styler-content/.exec(classList);
+	if (match && match[1]) {
+		$("li." + match[1] + "-ame-styler-content").show();
+	}
+}
+
 	// Toggle function.
 	$('[class*="-ame-styler-header"]').on("click", function () {
 		let text = this.className;
@@ -8,6 +19,7 @@
 		if (stem && stem[1]) {
 			let selector = "li." + stem[1] + "-ame-styler-content";
 			console.log("Header clicked:", stem[1], "-> toggling", selector);
+			// Toggle the clicked group
 			let target = $(selector);
 			$(target).toggle();
 		}

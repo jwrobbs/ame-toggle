@@ -1,15 +1,25 @@
 #adminmenu li[class*="-ame-styler-header"] {
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
-    color: var(--ame-styler-text, #FFF);
-    background: var(--ame-styler-bg, #002244);
+    color: var(--ame-styler-text, #FFF) !important;
+    background: var(--ame-styler-bg, #002244) !important;
 }
 #adminmenu li[class*="-ame-styler-header"]:hover,
-#adminmenu li[class*="-ame-styler-header"]:focus {
-    color: var(--ame-styler-text-hover, #FFF);
-    background: var(--ame-styler-bg-hover, #002244);
+#adminmenu li[class*="-ame-styler-header"]:focus,
+#adminmenu li[class*="-ame-styler-header"]:hover a,
+#adminmenu li[class*="-ame-styler-header"]:focus a,
+#adminmenu li[class*="-ame-styler-header"]:active {
+    color: var(--ame-styler-text-hover, #FFF) !important;
+    background: var(--ame-styler-bg-hover, #002244) !important;
 }
 .ame-styler-content {
     display: none;
     padding-left: 16px;
+}
+
+#adminmenu li[class*="-ame-styler-content"] {
+    display: none;
+}
+#adminmenu li[class*="-ame-styler-header"] > a {
+    background: transparent !important;
 }
